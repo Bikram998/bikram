@@ -1,0 +1,312 @@
+# set functions
+# 1. add()
+# 2. copy()
+# 3. clear()
+# 4. discard()
+# 5. remove()
+# 6. pop()
+# 7. union()
+# 8. update()
+# 9. intersection()
+# 10. intersection_update()
+# 11. difference()
+# 12. difference_update()
+# 13. symmetric_difference()
+# 14. symmetric_difference_update()
+# 15. isdisjoint()
+# 16. issuperset()
+# 17. issubset()
+
+# add():- it adds the element randomly in the set
+set_place = {"kathmandu", "Butwal", "Bhairahwa", "Kavre", "Banepa", "Narayanghat"}
+set_place.add("Pokhara")
+print("After: ", set_place)
+print("")
+
+set_items ={"Keyboard", "Mouse", "Monitor", "Laptop", "Fan", "Speaker"}
+set_items.add("Projector")
+print("After: ", set_items)
+print("")
+
+number = {1,2,3,4,5,6,21,45,32,90}
+number.add(56)
+print("After Number: ", number)
+print("")
+
+set_country = {"Nepal", "Nigeria", "israil", "Malaysia", "Saudi Arabia"}
+set_country.add("Philliphines")
+print("After adding: ", set_country)
+print("")
+
+set_name = {"Bikram", "Surat","Gokul", "Anisha","Ashok"}
+set_name.add("Ram")
+print("After adding name: ", set_name)
+print("")
+
+# clear():- it is used to delete all the records in the set
+set_items = {"Bed","Towel", "Bedsheets", "Fan", "Table","Chair"}
+set_items.clear()
+print("After clear:", set_items)
+
+set_name = {"Bikram", "Surat", "Gokul", "Anisha", "Ashok"}
+set_name.clear()
+print("After clear: ", set_name)
+
+set_country = {"Nepal", "Nigeria", "israil", "Malaysia", "Saudi Arabia"}
+set_country.clear()
+print("After clear: ", set_country)
+print("")
+
+
+# copy():- Copy one set to another empty set
+
+set_items = {"Bed","Towel", "Bedsheets", "Fan", "Table","Chair"}
+result = set_items.copy()
+print("After Copy: ", result)
+
+
+set_country = {"Nepal", "Nigeria", "israil", "Malaysia", "Saudi Arabia"}
+result = set_country.copy()
+print("After copy: ", set_country)
+
+set_name = {"Bikram", "Surat", "Gokul", "Anisha", "Ashok"}
+result = set_name.copy()
+print("After copy: ", result)
+print("")
+
+# discard():- removes if the value presents in the set and do nothing if the value doesnot present in the set
+
+set_capital = {"kathmandu", "Delhi", "Islamabad", "kabul","Dhaka"}
+set_capital.discard("Dhaka")
+set_capital.discard("Thimpu")
+print("After discard: ", set_capital)
+
+
+set_month = {"January", "Februrary", "March", "April","May", "June", "July"}
+set_month.discard("January")
+set_month.discard("December")
+print("After discard: ", set_month)
+
+
+set_year = {1990,1991,1992,1993,1994,1995,1996,1997}
+set_year.discard(1997)
+print("After Discard: ", set_year)
+
+set_mobile = {"Iphone", "Huwaei", "Redmi", "MI", "Vivo"}
+set_mobile.discard("Iphone")
+print("After Discard: ", set_mobile)
+print("")
+
+# remove():- It removes the value inside the set and if the value is not present in the set it raise exception
+
+set_capital = {"kathmandu", "Delhi", "Islamabad", "kabul","Dhaka"}
+set_capital.remove("Dhaka")
+#set_capital.remove("Thimpu")
+print("After remove: ", set_capital)
+
+set_month = {"January", "Februrary", "March", "April","May", "June", "July"}
+set_month.remove("January")
+print("After remove: ", set_month)
+
+set_year = {1990,1991,1992,1993,1994,1995,1996,1997}
+set_year.remove(1997)
+print("After remove: ", set_year)
+
+set_mobile = {"Iphone", "Huwaei", "Redmi", "MI", "Vivo"}
+set_mobile.remove("Iphone")
+print("After remove: ", set_mobile)
+print("")
+
+
+# pop():- removes any value of set
+
+
+set_month = {"January", "Februrary", "March", "April","May", "June", "July"}
+set_month.pop()
+print("After Pop: ", set_month)
+
+set_place = {"kathmandu", "Butwal", "Bhairahwa", "Kavre", "Banepa", "Narayanghat"}
+set_place.pop()
+print("After pop: ", set_place)
+
+set_name = {"Bikram", "Surat", "Gokul", "Anisha", "Ashok"}
+set_name.pop()
+print("After Pop: ", set_name)
+
+set_country = {"Nepal", "Nigeria", "israil", "Malaysia", "Saudi Arabia"}
+set_country.pop()
+print("After Pop: ", set_country)
+print("")
+
+# union:- create a new set having the elements of set 1 and set 2
+set_a = {"Nepal", "India", "China", "Bangladesh"}
+set_b = {1991, 1992, 1993, 1994, 1995}
+result = set_a.union(set_b)
+print("After union: ", result)
+
+set_country = {"Nepal", "Nigeria", "israil", "Malaysia", "Saudi Arabia"}
+set_name = {"Bikram", "Surat", "Gokul", "Anisha", "Ashok"}
+result = set_country.union(set_name)
+print(f"After union: ,{result}")
+
+number = {1,2,3,4,5,6,21,45,32,90}
+even_number = {2,4,6,8,10,12,14}
+result = number.union(even_number)
+print(f"After union: , {result}")
+print("")
+
+
+# update():- it adds the element of secondary set to primary set
+
+set_name = {"Bikram", "Surat", "Gokul", "Anisha", "Ashok"}
+set_a = {"Nepal", "India", "China", "Bangladesh"}
+set_name.update(set_a)
+print(f"Afte Update: , {set_name}")
+
+number = {1,2,3,4,5,6,21,45,32,90}
+even_number = {2,4,6,8,10,12,14}
+set_name.update(even_number)
+print(f"After Update: , {set_name}")
+
+set_capital = {"kathmandu", "Delhi", "Islamabad", "kabul","Dhaka"}
+set_month = {"January", "Februrary", "March", "April","May", "June", "July"}
+set_capital.update(set_month)
+print(f"After update: , {set_capital}")
+print("")
+
+# intersection():- It returns the matching value of the sets to new set
+set_a = {2,4,6,8,10,12,14,16}
+set_b = {1,2,3,4,5,6,7,8,9,0}
+result = set_a.intersection(set_b)
+print("After intersection: ", result)
+
+
+set_c = {"kathmandu", "Nepal", "Delhi", "India", "Islamabad", "Pakistan"}
+set_d = {"kathmandu", "Delhi", "Islamabad"}
+result = set_c.intersection(set_d)
+print("After intersection:", result)
+
+set_item = {"keyboard", "Mouse", "Charger", "Mousepad", "Multiplug", "Monitor", "desktop"}
+set_tool = {"Mouse", "Table", "Bed", "Chair", "Mousepad", "desktop", "Monitor"}
+result = set_item.intersection(set_tool)
+print(f"After intersection: ,{result}")
+print("")
+
+# intersection_update():- It returns the matching values of both set and update set a
+
+set_c = {"kathmandu", "Nepal", "Delhi", "India", "Islamabad", "Pakistan"}
+set_d = {"kathmandu", "Delhi", "Islamabad"}
+set_c.intersection_update(set_d)
+print("After intersection update:", set_c)
+print(f"Set D:  {set_d}")
+
+set_item = {"keyboard", "Mouse", "Charger", "Mousepad", "Multiplug", "Monitor", "desktop"}
+set_tool = {"Mouse", "Table", "Bed", "Chair", "Mousepad", "desktop", "Monitor"}
+set_item.intersection_update(set_tool)
+print(f"After intersection update: {set_item}")
+print(f"Set Tools:  {set_tool}")
+
+set_a = {2,4,6,8,10,12,14,16}
+set_b = {1,2,3,4,5,6,7,8,9,0}
+result = set_a.intersection_update(set_b)
+print("After intersection update: ", set_a)
+print("")
+
+# difference():- returns the unmatching elements of primary set
+
+set_item = {"keyboard", "Mouse", "Charger", "Mousepad", "Multiplug", "Monitor", "desktop"}
+set_tool = {"Mouse", "Table", "Bed", "Chair", "Mousepad", "desktop", "Monitor"}
+result = set_item.difference(set_tool)
+print(f"After difference: {result}")
+
+set_a = {2,4,6,8,10,12,14,16}
+set_b = {1,2,3,4,5,6,7,8,9,0}
+result = set_a.difference(set_b)
+print(f"After Difference: {result}")
+
+set_c = {"kathmandu", "Nepal", "Delhi", "India", "Islamabad", "Pakistan"}
+set_d = {"kathmandu", "Delhi", "Islamabad"}
+result = set_c.difference(set_d)
+print("After difference: ", result)
+print("")
+
+# difference_update():- returns the unmatching values and update it to primary set by clearing all other values
+
+set_c = {"kathmandu", "Nepal", "Delhi", "India", "Islamabad", "Pakistan"}
+set_d = {"kathmandu", "Delhi", "Islamabad"}
+set_c.difference_update(set_d)
+print(f"After difference Update: {set_c}")
+
+set_a = {2,4,6,8,10,12,14,16}
+set_b = {1,2,3,4,5,6,7,8,9,0}
+set_a.difference_update(set_b)
+print("After difference update: ", set_a)
+
+set_item = {"keyboard", "Mouse", "Charger", "Mousepad", "Multiplug", "Monitor", "desktop"}
+set_tool = {"Mouse", "Table", "Bed", "Chair", "Mousepad", "desktop", "Monitor"}
+set_item.difference_update(set_tool)
+print(f"After difference update: {set_item}")
+print("")
+
+# symmetric_difference():- returns the unmatching elements of both sets to a new set
+
+set_a = {2,4,6,8,10,12,14,16}
+set_b = {1,2,3,4,5,6,7,8,9,0}
+result = set_a.symmetric_difference(set_b)
+print(f"After symmetric difference: {result}")
+
+set_item = {"keyboard", "Mouse", "Charger", "Mousepad", "Multiplug", "Monitor", "desktop"}
+set_tool = {"Mouse", "Table", "Bed", "Chair", "Mousepad", "desktop", "Monitor"}
+result = set_item.symmetric_difference(set_tool)
+print("After symmetric difference: ", result)
+print("")
+
+# symmetric_difference_update():- returns the unmatching elements of both sets and update them to primary set nby clearing all other elements
+set_c = {"kathmandu", "Nepal", "Delhi", "India", "Islamabad", "Pakistan"}
+set_d = {"kathmandu", "Delhi", "Islamabad"}
+set_c.symmetric_difference_update(set_d)
+print(f"After symmetric difference update: {set_c}")
+
+set_item = {"keyboard", "Mouse", "Charger", "Mousepad", "Multiplug", "Monitor", "desktop"}
+set_tool = {"Mouse", "Table", "Bed", "Chair", "Mousepad", "desktop", "Monitor"}
+set_item.symmetric_difference_update(set_tool)
+print("After symmetric difference update: ", set_item)
+
+set_a = {2,4,6,8,10,12,14,16}
+set_b = {1,2,3,4,5,6,7,8,9,0}
+set_a.symmetric_difference_update(set_b)
+print("After symmetric difference update: ", set_a)
+print("")
+
+# is disjoint():- returns true if the two setrs are not intersected with eachother
+set_a = {2,4,6,8,10,12,14,16}
+set_b = {1,2,3,4,5,6,7,8,9,0}
+print("After isdisjoint operation: ", set_a.isdisjoint(set_b))
+
+set_item = {"keyboard", "Mouse", "Charger", "Mousepad", "Multiplug", "Monitor", "desktop"}
+set_tool = {"Mouse", "Table", "Bed", "Chair", "Mousepad", "desktop", "Monitor"}
+print("After isdisjoint: ", set_item.isdisjoint(set_tool))
+print("")
+
+# issuperset:- returns true if a set is super/parent/big set of other
+set_c = {"kathmandu", "Nepal", "Delhi", "India", "Islamabad", "Pakistan"}
+set_d = {"kathmandu", "Delhi", "Islamabad"}
+print("After: ", set_c.issuperset(set_d))
+
+set_a = {2,4,6,8,10,12,14,16}
+set_b = {1,2,3,4,5,6,7,8,9,0}
+print("After: ", set_a.issuperset(set_b))
+print("")
+
+# issubset:- returns true if given set is a child/small/subset of other set
+set_item = {"keyboard", "Mouse", "Charger", "Mousepad", "Multiplug", "Monitor", "desktop"}
+set_tool = {"Mouse", "Table", "Bed", "Chair", "Mousepad", "desktop", "Monitor"}
+print("After: ", set_item.issubset(set_tool))
+
+set_a = {2,4,6,8,10,12,14,16}
+set_b = {1,2,3,4,5,6,7,8,9,0}
+print("After: ", set_a.issubset(set_b))
+
+set_c = {"kathmandu", "Nepal", "Delhi", "India", "Islamabad", "Pakistan"}
+set_d = {"kathmandu", "Delhi", "Islamabad"}
+print("After: ", set_d.issubset(set_c))

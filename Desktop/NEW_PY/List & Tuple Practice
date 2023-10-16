@@ -1,0 +1,205 @@
+# List practice
+#Functions in list
+#1. append()
+#2. copy()
+#3. clear()
+#4. count()
+#5. extend()
+#6. index()
+#7. insert()
+#8. pop()
+#9. remove()
+#10. sort()
+#11. reverse()
+
+
+#1. append:- used to add the value in list
+# It adds the value at last
+#1.
+projects = ["NGO", "water resorvior", "Hydro power", "Tree plantation"]
+print("Before: ", projects)
+projects.append("Road construction")
+print("After: ", projects)
+
+#2.
+even_number = [2,4,6,8,10,12,14,16]
+print("Before: ", even_number)
+even_number.append(22)
+print("After: ", even_number)
+
+#3. 
+name = ["Durgesh", "Sagar","Munal", "khadka", "Gokul", "anisha"]
+print("Before: ", name)
+name.append("Bikram")
+print("After: ", name)
+
+#4. 
+Animals = ["Elephant", "Tiger", "Lion","Leopard", "Crocodile"]
+print("Before: ", Animals)
+Animals.append("Cow")
+print(f"Animals: {Animals}")
+
+#5. 
+Universities = ["Lincoln", "Tribhuwan","Purwanchal", "Far-Western", "Mid-Western"]
+print(f"Before: {Universities}")
+Universities.append("ST. johns")
+print(f"After: {Universities}")
+print("")
+
+#2. copy:- It copies the values of one list to another empty list
+#1. 
+projects = ["NGO", "water resorvior", "Hydro power", "Tree plantation"]
+print(f"Before: {projects}")
+new_projects = projects.copy()
+print(f"New Projects: {new_projects}")
+print("")
+#2. 
+even_number = [2,4,6,8,10,12,14,16]
+print("Before: ", even_number)
+copied_number = even_number.copy()
+print(f"copied number: {copied_number}")
+#3. 
+name = ["Durgesh", "Sagar","Munal", "khadka", "Gokul", "anisha"]
+print("Before: ", name)
+Copied_name = name.copy()
+print("Copied_name: ", Copied_name)
+
+
+#4. 
+Animals = ["Elephant", "Tiger", "Lion","Leopard", "Crocodile"]
+print(f"Animals: {Animals}")
+Copied_animals = Animals.copy()
+print(f"After Copy: {Copied_animals}")
+
+#5. 
+Universities = ["Lincoln", "Tribhuwan","Purwanchal", "Far-Western", "Mid-Western"]
+print(f"Before: {Universities}")
+copied_universities = Universities.copy()
+print(f"After Copy: {copied_universities}")
+print("")
+
+#3. Count:- It counts the occurences of the value in the list
+even_number = [2,4,6,8,10,12,14,16, 2, 2 ,3 ,4 ,5 ]
+even_num = even_number.count(2)
+print(f"Count the number 2: {even_num}")
+print("The number 4: ", even_number.count(4))
+
+name = ["Durgesh", "Sagar","Munal", "khadka", "Gokul", "anisha"]
+print(f"The count of Durgesh is: {name.count('Durgesh')}")
+
+Animals = ["Elephant", "Tiger", "Lion","Leopard", "Crocodile"]
+print("The count for elephant is: ", Animals.count("Elephant"))
+print("")
+
+#4. clear():- It is used to delete all records in the list
+
+name = ["Durgesh", "Sagar","Munal", "khadka", "Gokul", "anisha"]
+print("After Cleared: ", name.clear())
+
+even_number = [2,4,6,8,10,12,14,16, 2, 2 ,3 ,4 ,5 ]
+print("After Cleared: ", even_number.clear())
+print("")
+
+
+#5. extend(): It is used to add whole list to another list or to add more than value in the list
+projects = ["NGO", "water resorvior", "Hydro power", "Tree plantation"]
+Universities = ["Lincoln", "Tribhuwan","Purwanchal", "Far-Western", "Mid-Western"]
+projects.extend(Universities)
+print("All details: ", projects)
+print("UNIVERSITIES:", Universities)
+
+Animals = ["Elephant", "Tiger", "Lion","Leopard", "Crocodile"]
+even_number = [2,4,6,8,10,12,14,16, 2, 2 ,3 ,4 ,5 ]
+Animals.extend(even_number)
+print(f"Animals: {Animals}")
+print(f"even_numbers: {even_number}")
+print("")
+
+#6. index():- Gives the index value of the values in list
+even_number = [2,4,6,8,10,12,14,16, 2, 2 ,3 ,4 ,5 ]
+print("Index number pf 8: ", even_number.index(8))
+
+
+Universities = ["Lincoln", "Tribhuwan","Purwanchal", "Far-Western", "Mid-Western"]
+print(f"Index number of Mid-Western: {Universities.index('Mid-Western')} ")
+print("")
+
+
+#7. insert():- It is used to insert the values at specified index number
+
+even_number = [2,4,6,8,10,12,14,16, 2, 2 ,3 ,4 ,5 ]
+even_number.insert(3, "Bikram")
+print("After inserting: ", even_number)
+
+Animals = ["Elephant", "Tiger", "Lion","Leopard", "Crocodile"]
+Animals.insert(4,"Elegtor")
+print("After inserting value: ", Animals )
+
+projects = ["NGO", "water resorvior", "Hydro power", "Tree plantation"]
+projects.insert(4, "Management")
+print("After inserting: ", projects)
+
+name = ["Durgesh", "Sagar","Munal", "khadka", "Gokul", "anisha"]
+name.insert(4, "Ashok")
+print("After Inserting: ", name)
+print("")
+
+#8. pop():- Removes the value from list
+#case1. pop()default:- Removes the last value of a list
+#case2. pop(value):- Removes the index defined value
+
+name = ["Durgesh", "Sagar","Munal", "khadka", "Gokul", "anisha"]
+name.pop()
+print("Name:", name)
+name.pop(1)
+name.pop(2)
+
+print("After pop: ", name)
+
+print("")
+
+#9. remove():- Removes the specified value from the list
+
+Universities = ["Lincoln", "Tribhuwan","Purwanchal", "Far-Western", "Mid-Western"]
+Universities.remove("Mid-Western")
+print("After Removing: ", Universities)
+even_number = [2,4,6,8,10,12,14,16]
+even_number.remove(10)
+print("After Remove Functions: ", even_number)
+
+
+#10. sort():- Used to sort the value in ascending and descending order
+
+Universities = ["Lincoln", "Tribhuwan","Purwanchal", "Far-Western", "Mid-Western"]
+Universities.sort(reverse=True)
+print("After universities: ", Universities)
+
+even_number = [2,4,6,8,10,12,14,16]
+even_number.sort(reverse=False)
+print("After Reversing: ", even_number)
+even_number.sort(reverse=True)
+print("After reversing: ",even_number )
+print("")
+
+#11. reverse():- It reverses the unicode character in the list
+
+
+name = ["Durgesh", "Sagar","Munal", "khadka", "Gokul", "anisha"]
+name.reverse()
+print("After Reversing: ", name)
+print("")
+
+# Tuple Practice Sets
+#1. index():- returns the index value of the data values in tuple
+
+name1 = ("Bikram", "Surat", "Gokul", "Ashok","Anisha",)
+print(type(name1))
+print("Name: ",name1.index("Surat") )
+print("Index Value of Anisha: ", name1.index("Anisha"))
+
+
+#2. count(): Gives the counting of occurences of the values in the tuple
+
+name = ["Durgesh", "Sagar","Munal", "khadka", "Gokul", "anisha", "Munal", "Munal"]
+print("After Count: ",name.count("Gokul") )
+print("After count2: ", name.count("Munal"))
