@@ -1,0 +1,135 @@
+# String Functions 
+# 1. capitalize()
+# 2. casefold()
+# 3. upper()
+# 4. lower()
+# 5. startswith()
+# 6. endswith()
+# 7. split()
+# 8. join()
+# 9. replace()
+# 10. format()
+# 11. isalpha()
+# 12. isalnum()
+# 13. count()
+
+
+# 1. capitalize():- returns the first letter of string in capital letter and remaining in small letter
+# If the first character is alphabetical character then do nothing
+
+msg_of_the_day = "hello! good morning! have a nice day today!"
+print("After Capitalization: ", msg_of_the_day.capitalize())
+
+quote = "1- my Name is Bikram. 2- i have great dream"
+print("quote after capitalize: ", quote.capitalize())
+
+statement = "great power comes with great responsibilities"
+print(f"After capitalize: {statement.capitalize()}")
+
+view = "3rd view from kl towewr is best"
+print("After Capitalize: ", view.capitalize())
+print("")
+# 2. casefold():- returns other case in lower case by converting
+
+random_phrase = "iSBHDFKWSN ksshd bJSKSB SNIOJ"
+print(random_phrase.casefold())
+
+msg = "i love you my jaaneman"
+print(msg.casefold())
+
+random_phrase = "Floß, das ~ (HolzfloßFlöße)"
+print(random_phrase.casefold())
+
+# 3. upper():- returns all alphabetics in upper case
+msg = "i love you my jaaneman"
+print(msg.upper())
+
+# 4. lower():- returns all alphabates in lower case
+msg = "NICE TO MEET YOU BILLU"
+print(msg.lower())
+print("")
+
+# 5. startswith():- returns true if theb string starts withparticular substring
+email = "vikramvickey998@gmail.com"
+start_with = "vikr"
+print("start_with functions: ", email.startswith(start_with))
+
+name = "Hello! My name is Bikram damai"
+start = "Hello!"
+print("Start_with Functions: ", name.startswith(start))
+
+msg = "i love you my jaaneman"
+Janeman = "love you"
+print("Start_with functions: ", msg.startswith(Janeman))
+print("")
+
+# 6. endswith():- returns true if the string ends with particular substring
+email = "vikramvickey998@gmail.com"
+start_with = "vikr"
+print("start_with functions: ", email.endswith(start_with))
+
+name = "Hello! My name is Bikram damai"
+start = "damai"
+print("Start_with Functions: ", name.endswith(start))
+
+msg = "i love you my jaaneman"
+Janeman = "namenaaj"
+print("Start_with functions: ", msg.endswith(Janeman))
+print("")
+
+# 7. split():- breaks the sting in its substring
+# 8. join() - joins all item of list with substring passed and
+# returns in string. substring is included
+msg = "This is Kathmandu and it is the capital of Nepal"
+items = ["Bottle", "Cupboard", "Table", "Flower Vase", "Paint"]
+result_msg = msg.split("i")
+print(result_msg)
+result_items = "**".join(items)
+print(result_items)
+
+# 9. replace():-  It replace old string with new string
+msg = "i love you my jaaneman"
+msg2 = "Madhuri"
+print(msg.replace("jaaneman", "Madhuri"))
+
+name = "Hello! My name is Bikram damai"
+print(name.replace("damai", "Sharma"))
+
+# 10. format() - formats the string substitution
+# case one - no index no variable
+phrase = "Hello {}, are you from {}? You are {} right?"
+print(phrase.format("Jill", "USA", 22))
+
+# case two - with index only
+phrase = "Hello {0}, are you from {1}? You are {2} right?"
+print(phrase.format("Jill", "USA", 22))
+
+# case three - with variable only
+phrase = "Hello {name}, are you from {place}? You are {age} right?"
+print(phrase.format(name="Jill", place="USA", age=22))
+
+# case four - both variable and index
+phrase = "Hello {0}, are you from {place}? You are {age} right?"
+print(phrase.format("Jill", place="USA", age=22))
+
+# 11. isalpha():- returns true if the string character is all alphabets
+
+name = "kathmandu"
+print(name.isalpha())
+
+password = "Bikram998@"
+print(password.isalpha())
+
+# 12. isalnum():- returns true if the string contains numeric value and alphabetical value
+
+password = "Vikram998"
+print(password.isalnum())
+
+email = "alphabikram998"
+print(email.isalnum())
+
+# 13. count():- returns the total number value of the occurence of given string 
+msg = "Hello! This is Malaysia and currently i am studying computer science at Lincoln University College"
+print("Count i: ", msg.count("i"))
+print("Count of M: ", msg.count("M"))
+print("Count s: ", msg.count("s"))
