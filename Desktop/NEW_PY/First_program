@@ -1,0 +1,21 @@
+Total_Fee = 500
+
+input_Age = int(input("Please Provide your Age: "))
+if input_Age < 10:
+    print("Congratulation You Got Free Ride")
+elif input_Age >= 10 and input_Age >=30:
+    print("Have To Pay Full Fee!")
+    input_height = int(input("Please Enter Your HEight: "))
+    if input_height < 5:
+        print("You Got Free Ride")
+    else:
+        print("You Have to pay Full Fee!")
+    input_card = input("Please Provide Your Card: ")
+    if input_card == "Student Card":
+        print("Congrates You Have Got 50% discount!")
+    elif input_card == "Disabled Card":
+        print("You have got 25% discount")
+    else:
+            print("GET OUT")
+else:
+    print("Congrates You Also Get Free Rides!")
