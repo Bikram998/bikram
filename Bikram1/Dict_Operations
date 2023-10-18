@@ -1,0 +1,267 @@
+# dictionary Functions:
+# 1. clear()
+# 2. copy()
+# 3. get()
+# 4. items()
+# 5. keys()
+# 6. values()
+# 7. pop()
+# 8. popitem()
+# 9. setdefault()
+# 10. update()
+# 11. fromkeys()
+
+
+# 1. clear():- it deletes all the values from dict
+
+place_details = {
+    "name": "Kathmandu",
+    "province" : "Bagmati",
+    "Historical_importance": "Famous for religious temple of Pashupatinath",
+}
+place_details.clear()
+print(place_details)
+
+orders = {
+    "Mouse": 2,
+    "keyboard": 7,
+    "Monitor": 10,
+    "brand": "Samsung",
+}
+orders.clear()
+print(orders)
+
+details = {
+    "Order_name": "Iphone",
+    "Oredr_item": "Iphone 15 pro max",
+    "Order_date": "2023/10/18",
+    "Order_place": "Malaysia",
+    "Order_ID": 123890747,
+}
+
+details.clear()
+print("Order_Status: ", details)
+print("")
+# 2. copy():- This function copies all the inside key_value to new dictionary
+
+Task = {
+    "Task_name": "Examination",
+    "Task_type": "Indoor",
+    "Task_code": 121234,
+    "Task_nature": "mental wellbeing check for students"}
+
+result1 = Task.copy()
+print("Result: ",result1)
+
+place_details = {
+    "name": "Kathmandu",
+    "province" : "Bagmati",
+    "Historical_importance": "Famous for religious temple of Pashupatinath",
+}
+result2 = place_details.copy()
+print("Result2: ", result2)
+
+
+place_details.clear()
+print(place_details)
+
+orders = {
+    "Mouse": 2,
+    "keyboard": 7,
+    "Monitor": 10,
+    "brand": "Samsung",
+}
+result3 = orders.copy()
+print("Result3: ", result3)
+print("")
+
+# 4. items():- returns theb key-value pair of the dictionary
+
+place_details = {
+    "name": "Kathmandu",
+    "province" : "Bagmati",
+    "Historical_importance": "Famous for religious temple of Pashupatinath",
+}
+
+print("Items: ", place_details.items())
+
+orders = {
+    "Mouse": 2,
+    "keyboard": 7,
+    "Monitor": 10,
+    "brand": "Samsung",
+}
+print("Items1: ", orders.items())
+
+
+details = {
+    "Order_name": "Iphone",
+    "Oredr_item": "Iphone 15 pro max",
+    "Order_date": "2023/10/18",
+    "Order_place": "Malaysia",
+    "Order_ID": 123890747,
+}
+
+print("Items2: ", details.items())
+
+
+Task = {
+    "Task_name": "Examination",
+    "Task_type": "Indoor",
+    "Task_code": 121234,
+    "Task_nature": "mental wellbeing check for students"}
+
+print("Items3: ", Task.copy())
+print("")
+
+
+# 5. keys():- returns the key available
+
+Task = {
+    "Task_name": "Examination",
+    "Task_type": "Indoor",
+    "Task_code": 121234,
+    "Task_nature": "mental wellbeing check for students"}
+
+print("Keys: ", Task.keys())
+
+details = {
+    "Order_name": "Iphone",
+    "Oredr_item": "Iphone 15 pro max",
+    "Order_date": "2023/10/18",
+    "Order_place": "Malaysia",
+    "Order_ID": 123890747,
+}
+print("keys1: ", details.keys())
+
+orders = {
+    "Mouse": 2,
+    "keyboard": 7,
+    "Monitor": 10,
+    "brand": "Samsung",
+}
+
+print("Keys3: ", orders.keys())
+
+print("")
+
+# 6. values():- returns the values available
+
+orders = {
+    "Mouse": 2,
+    "keyboard": 7,
+    "Monitor": 10,
+    "brand": "Samsung",
+}
+
+print("Values: ", orders.values())
+
+
+details = {
+    "Order_name": "Iphone",
+    "Oredr_item": "Iphone 15 pro max",
+    "Order_date": "2023/10/18",
+    "Order_place": "Malaysia",
+    "Order_ID": 123890747,
+}
+
+print("Values2: ", details.values())
+
+
+Task = {
+    "Task_name": "Examination",
+    "Task_type": "Indoor",
+    "Task_code": 121234,
+    "Task_nature": "mental wellbeing check for students"}
+
+print("Values: ", Task.values())
+
+
+# 6. pop :- removes the specific key-value from dict and returns the value
+
+kits = {
+    "brand": "Jade",
+    "tools": ["screw", "node", "cutter", "pin", "pliers"],
+    "price": 2200.00,
+    "made": "Made in Japan",
+    "certification": "ISO Certified"
+}
+print("Before:", kits)
+print(kits.pop("tools"))
+print(kits.pop("made"))
+print("After:", kits)
+print("")
+
+
+event_details = {
+    "event_name": "Concert",
+    "rganizer": "Lincoln University College",
+    "event_date": "2023/10/18",
+    "Highlights": ["Free drinks","Free_Sauna","Free_Dance", "Free gym", "Paid_ food", "Paid_guide"],
+    "event_guest": "Mr. Bikram"
+}
+print("Before:", event_details)
+event_details.pop("Highlights")
+print("After: ", event_details)
+event_details.pop("rganizer")
+print(event_details)
+
+
+# 7. popitems():- removes the last key-value items of the dictionary
+
+details = {
+    "Order_name": "Iphone",
+    "Oredr_item": "Iphone 15 pro max",
+    "Order_date": "2023/10/18",
+    "Order_place": "Malaysia",
+    "Order_ID": 123890747,
+}
+print("Before: ", details)
+details.popitem()
+print(details)
+
+# 8. setdefault():- takes two parameter- first parameter key and second parameter value which is optional. If value is not pass in second parameter then put none as a default value
+# case one :- Passing both key and value
+details = {
+    "Order_name": "Iphone",
+    "Oredr_item": "Iphone 15 pro max",
+    "Order_date": "2023/10/18",
+    "Order_place": "Malaysia",
+    "Order_ID": 123890747,}
+
+details.setdefault("Bikram", "Damai")
+print(details)
+
+# case two: passing only key
+
+details = {
+    "Order_name": "Iphone",
+    "Oredr_item": "Iphone 15 pro max",
+    "Order_date": "2023/10/18",
+    "Order_place": "Malaysia",
+    "Order_ID": 123890747,
+}
+
+details.setdefault("Brand")
+print(details)
+
+
+orders = {
+    "Mouse": 2,
+    "keyboard": 7,
+    "Monitor": 10,
+    "brand": "Samsung",
+}
+
+orders.setdefault("Mouse")
+print(orders)
+
+
+# 10. fromkeys():- takes parameter one key(iterable) and other value keeps value same to all keys and creates new dict
+
+order = [1,2,3,4,5,6,7,8]
+Name = "Bikram"
+result = dict.fromkeys(order, Name)
+print(result)
+
+print("")
