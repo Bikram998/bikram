@@ -1,0 +1,132 @@
+# Case Study - Student Record
+def message(msg):
+    if msg == "SC":
+        return "Successfully added"
+    elif msg == "FN":
+        return "File Not Found"
+    elif msg == "WC":
+        return "Welcome to MindRisers"
+    elif msg == "LF":
+        return "Invalid Username or Password"
+    elif msg == "LS":
+        return "Login Success"
+    elif msg == "CD":
+        return "Add Student: ADD & View Student: VIEW"
+    else:
+        return "Something went wrong"
+
+def recordStudent(student_details):
+    try:
+        file_url = "D:/Python Class MindRisers/Python Asar 2079/Morning/student.txt"
+        file = open(file_url, "a")
+        file.write(str(student_details) + "\n")
+    except FileNotFoundError as error:
+        print("Error Message: ", error)
+    finally:
+        try:
+            file.close()
+            print(message("SC"))
+        except:
+            print(message("FN"))
+
+def viewStudent():
+    try:
+        file_url = "D:/Python Class MindRisers/Python Asar 2079/Morning/student.txt"
+        file = open(file_url, "r")
+        print(file.read())
+    except FileNotFoundError as error:
+        print("Error Message: ", error)
+    finally:
+        try:
+            file.close()
+            print(message("SC"))
+        except:
+            print(message("FN"))
+
+def login():
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+    if username == "MR" and password == "2580":
+        print(message("LS"))
+        print(message("CD"))
+        code = input("Enter Action: ")
+        if code == "ADD":
+            name = input("Enter student name: ")
+            recordStudent(name)
+        else:
+            viewStudent()
+    else:
+        print(message("LF"))
+        login()
+
+login()
+
+# object oriented
+class Message():
+    def __init__(self):
+        self.msg = str
+    
+    def getMessage(self):
+        if self.msg == "SC":
+            return "Successfully added"
+        elif self.msg == "FN":
+            return "File Not Found"
+        elif self.msg == "WC":
+            return "Welcome to MindRisers"
+        elif self.msg == "LF":
+            return "Invalid Username or Password"
+        elif self.msg == "LS":
+            return "Login Success"
+        elif self.msg == "CD":
+            return "Add Student: ADD & View Student: VIEW"
+        else:
+            return "Something went wrong"
+
+class Student():
+    def __init__(self, name):
+        self.name = name
+    
+    def recordStudent(self):
+        msg_obj = Message()
+        try:
+            file_url = "D:/Python Class MindRisers/Python Asar 2079/Morning/student.txt"
+            file = open(file_url, "a")
+            file.write(str(self.name) + "\n")
+        except FileNotFoundError as error:
+            print("Error Message: ", error)
+        finally:
+            try:
+                file.close()
+                msg_obj.msg = "SC"
+                print(msg_obj.getMessage())
+            except:
+                msg_obj.msg = "FN"
+                print(msg_obj.getMessage())
+
+def doLogin():
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+    obj = Message()
+    if username == "MR" and password == "2580":
+        obj.msg = "LS"
+        print(obj.getMessage())
+
+        obj.msg = "CD"
+        print(obj.getMessage())
+
+        code = input("Enter Action: ")
+        if code == "ADD":
+            name = input("Enter student name: ")
+            std = Student(name)
+            std.recordStudent()
+    else:
+        obj.msg = "LF"
+        print(obj.getMessage())
+        doLogin()
+
+doLogin()
+
+
+
+
+    
